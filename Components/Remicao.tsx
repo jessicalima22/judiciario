@@ -1,5 +1,9 @@
 import moment from "moment";
 
+
+
+
+
 export default function Remicao(){
 
     //Padrão brasileiro
@@ -11,18 +15,19 @@ export default function Remicao(){
         return `${novaData.getDate()}/${novaData.getMonth()+1}/${novaData.getFullYear()}`
     }
 
-    var d1 = "29/08/2020";
-    var d2 = "12/02/2020";
+    const hoje: string = moment().toString();
 
-    var diff = moment(d2, "DD/MM/YYYY").diff(moment(d1,"DD/MM/YYYY"));
-    var anos:any = moment.duration(diff).years;
+    const today = hoje
+    
+
+    
 
 
     return (
        <div>
            <h1>Calcule a remição</h1>
            <p> <input type="date" name="dataAtual" id="dataAtual" /></p>
-           {anos}
+           {today}
        </div>
     )
 }
